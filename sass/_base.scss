@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+    font-family: 'Abel', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $body-bg;
+    @include flexCenter;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.main-entry__form{
+    @include flexCenter;
+    flex-direction: column;
+}
