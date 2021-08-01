@@ -12,7 +12,6 @@
             required>
         <button class="main-entry__button">Go!</button>
 
-        
 
 </form>
 

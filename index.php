@@ -1,5 +1,5 @@
 <?php
-    $number = filter_input(INPUT_GET,'num',FILTER_SANITIZE_NUMBER_INT);
+    $number = filter_input(INPUT_GET,'set',FILTER_SANITIZE_NUMBER_INT);
 
 ?>
 <!DOCTYPE html>
@@ -8,17 +8,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mulitplication Flash Cards</title>
+    <title>Sets Flash Cards</title>
     <link rel="stylesheet" href="sass/main.css">
 </head>
 <body>
     <?php include("./view/header.php");?>
     <?php 
         if($number){
-            include("./view/results.php");
+            include("./view/results_2.php");
         }
         else{
-            include("./view/form.php");
+            include("./view/form_2.php");
         }
     ?>
     <?php include("./view/footer.php");?>
