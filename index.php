@@ -1,5 +1,5 @@
 <?php
-    $number = filter_input(INPUT_GET,'set',FILTER_SANITIZE_NUMBER_INT);
+    $number = filter_input(INPUT_GET,'set', FILTER_SANITIZE_ENCODED);
 
 ?>
 <!DOCTYPE html>
