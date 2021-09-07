@@ -10,17 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sets Flash Cards</title>
     <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css">
 </head>
 <body>
-    <?php include("./view/header.php");?>
-    <?php 
+
+    <?php include("./view/header.php");
         if($number){
             include("./view/results_2.php");
         }
         else{
             include("./view/form_2.php");
         }
-    ?>
-    <?php include("./view/footer.php");?>
+     include("./view/footer.php");
+     ?>
 </body>
 </html>
+
