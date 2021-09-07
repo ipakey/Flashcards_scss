@@ -3,16 +3,16 @@
     <form class="main-entry__form" action="<?php $_SERVER['PHP_SELF'] ?>" method="GET">
         <input
             class="main-entry__input"
-            id="num"
-            name="num"
-            aria-labelledby="enterNumber"
+            id="set"
+            name="set"
+            aria-labelledby="enterSet"
             type="text"
-            maxlength="2"
+            maxlength="6"
             autofocus
             required>
         <button class="main-entry__button">Go!</button>
 
-        
+
 
 </form>
 
