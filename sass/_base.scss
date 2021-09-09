@@ -21,6 +21,10 @@ body {
     padding-bottom: 60px;
 }
 
+.main-overlay{
+    display: none;
+}
+
 .container{
     @include flexCenter;
     flex-direction: column;
