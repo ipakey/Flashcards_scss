@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +6,15 @@
           box-sizing: border-box;
 }
 
-
 html {
-  font-size: 24px;
-  font-family: 'Abel', sans-serif;
+  font-size: 42px;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #eee;
+  background: #aceed5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +29,23 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 60px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
 }
 
 .main-entry__form {
@@ -72,7 +88,7 @@ body {
 }
 
 .header, .footer {
-  background-color: #333;
+  background-color: #08925d;
   color: #fff;
   font-size: 0.5rem;
   width: 100%;
@@ -83,7 +99,7 @@ body {
 .footer {
   position: fixed;
   height: 60px;
-  bottom: 0;
+  top: calc(100vh - 60px);
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,8 +178,8 @@ body {
 
 .main-entry__input,
 .main-entry__button {
-  font-family: 'Abel', sans-serif;
-  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7rem;
   letter-spacing: 0.05em;
   padding: 0.25em;
   border-radius: 15px;
@@ -191,8 +207,8 @@ body {
   }
   .main-entry__input,
   .main-entry__button {
-    font-size: 2rem;
-    width: 200px;
+    font-size: 1.5rem;
+    width: 100%;
     height: 150px;
   }
 }
@@ -215,13 +231,47 @@ body {
           flex-grow: 1;
 }
 
+.main-results__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-results__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-flow: space-between;
+      flex-flow: space-between;
+}
+
 .card {
-  width: 22%;
+  width: 42%;
   min-width: 150px;
   min-height: 100px;
   background: transparent;
   color: #fff;
-  font-size: 1rem;
+  font-size: .7em;
   padding: 1em;
   margin: 0.25em;
   outline: none;
@@ -268,7 +318,7 @@ body {
 
 .card-back {
   background: #fff;
-  color: #333;
+  color: #08925d;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   display: -webkit-box;
@@ -282,22 +332,92 @@ body {
           align-items: center;
 }
 
+.main-results__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  padding: 0.25em;
+  border-radius: 15px;
+  width: 100%;
+  height: 73px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-results__incorrect {
+  font-family: 'Abel', sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.05em;
+  padding: 0.25em;
+  border-radius: 15px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+  background: darkgreen;
+}
+
+.main-results__correct {
+  font-family: 'Abel', sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.05em;
+  padding: 0.25em;
+  border-radius: 15px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+  background: #f0cd1f;
+}
+
+.main-results__input:focus,
+.main-results__button:focus {
+  outline: none;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-results__correct,
+.main-results__button-yes {
+  background: #f0cd1f;
+  color: #fff;
+}
+
+.main-results__incorrect,
+.main-results__button-no {
+  background: darkgreen;
+  color: #fff;
+}
+
 @media only screen and (min-width: 768px) {
-  .main-entry {
+  .card {
+    width: 300px;
+    height: 175px;
+  }
+  .main-results {
     font-size: 1rem;
   }
-  .main-entry__input,
-  .main-entry__button {
+  .main-results__input,
+  .main-results__button {
     font-size: 2rem;
-    width: 200px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .card {
-    width: 350px;
-    height: 175px;
+    width: 100px;
+    height: 100px;
   }
 }
 /*# sourceMappingURL=main.css.map */

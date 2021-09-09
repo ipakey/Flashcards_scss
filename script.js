@@ -165,12 +165,18 @@ class Flashcards_Set {
 	}
 	
 	victory(){																
-		clearInterval(this.countDown);										
+												
 		document.getElementById('victory-text').classList.add('visible');	
 		this.audioController.victoryAudio();
 		this.startCountDown.pause();
+		this.saveResult(this.Score, this.countDown);
+		clearInterval(this.countDown);
 	}
 	
+	saveResult(score, time){
+
+	}
+
 	shuffleCards(){
 		for(let i = this.cardArray.length - 1; i > 0; i--) { 				
 			let randomIndex = Math.floor(Math.random() * (i+1));

@@ -1,12 +1,14 @@
 <main class="main-entry">
-    <h2 id="enterNumber">Choose your card set</h2>
+    <div class="container">
+    <h2 class='header' id="enterNumber">Choose your card set</h2>
+
     <form class="main-entry__form" action="<?php htmlentities($_SERVER['PHP_SELF'])  ?>" method="GET">
     
         <select 
             class="main-entry__input"
             id="cards"
             name="set"
-            placeholder="Choose your cards"
+           
             aria-labelledby="enterSetUnits"
             type="text"
             maxlength="8"
@@ -22,5 +24,5 @@
 
 </form>
 
-
+</div>
 </main>
