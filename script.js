@@ -58,6 +58,9 @@ class Flashcards_Set {
 		this.audioController= new AudioController();	
 	}
 	
+	
+
+
 	//Start the game method
 	startGame(){															
 		this.cardToCheck = null;
@@ -213,6 +216,7 @@ function showSlides(n) {
 		}
 	}
 	
+
 	canFlipCard(card){																			
 		return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;	
 	}		
@@ -222,10 +226,18 @@ function ready(){
 	// load overlays and cards and create Arrays of data
 	
 	let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+	
+
 	let cards = Array.from(document.getElementsByClassName('card'));
 	console.log(cards);
 	let totalTime= document.getElementById('time-remaining');
     
+// select path for Card Set
+	
+
+	
+
+
 	let game = new Flashcards_Set(100, cards);
 	
  		overlays.forEach(overlay => {
@@ -233,7 +245,18 @@ function ready(){
 				overlay.classList.remove('visible');
 				game.startGame();								//Will start //game play when defined
 			let audioController = new AudioController();						
-													
+			document.addEventListener( 'DOMContentLoaded' ,() =>{
+				document.getElementById('set').addEventListener('input', handleSelect);
+			})	;					
+			function handleSelect(ev){
+				let select = ev.target;
+				console.log(select.value);
+			}
+
+			function handleData(ev){
+				let theInput = ev.target;
+			}
+			
 			});
 		});
 		cards.forEach(card => {														

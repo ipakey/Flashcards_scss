@@ -262,7 +262,8 @@ function ready() {
   var overlays = Array.from(document.getElementsByClassName('overlay-text'));
   var cards = Array.from(document.getElementsByClassName('card'));
   console.log(cards);
-  var totalTime = document.getElementById('time-remaining');
+  var totalTime = document.getElementById('time-remaining'); // select path for Card Set
+
   var game = new Flashcards_Set(100, cards);
   overlays.forEach(function (overlay) {
     overlay.addEventListener('click', function () {
@@ -270,6 +271,18 @@ function ready() {
       game.startGame(); //Will start //game play when defined
 
       var audioController = new AudioController();
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('set').addEventListener('input', handleSelect);
+      });
+
+      function handleSelect(ev) {
+        var select = ev.target;
+        console.log(select.value);
+      }
+
+      function handleData(ev) {
+        var theInput = ev.target;
+      }
     });
   });
   cards.forEach(function (card) {
