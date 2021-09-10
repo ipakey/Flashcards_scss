@@ -58,9 +58,6 @@ class Flashcards_Set {
 		this.audioController= new AudioController();	
 	}
 	
-	
-
-
 	//Start the game method
 	startGame(){															
 		this.cardToCheck = null;
@@ -72,7 +69,7 @@ class Flashcards_Set {
 		// this timeout pauses the game to allow the shuffle to happen before the countdown & flips can begin it is set to .5seconds
 		setTimeout(() =>{							
 			//this.audioController.startMusic();								
-			this.shuffleCards();											
+			//this.shuffleCards();											
 			this.countDown = this.startCountDown();							
 			this.busy = false;			
 		} , 500);
@@ -228,7 +225,9 @@ function ready(){
 	let overlays = Array.from(document.getElementsByClassName('overlay-text'));
 	
 
-	let cards = Array.from(document.getElementsByClassName('card'));
+	let cards = json_encode($cards); 
+	let order = json_encode($order);
+
 	console.log(cards);
 	let totalTime= document.getElementById('time-remaining');
     
@@ -245,20 +244,7 @@ function ready(){
 				overlay.classList.remove('visible');
 				game.startGame();								//Will start //game play when defined
 			let audioController = new AudioController();						
-			document.addEventListener( 'DOMContentLoaded' ,() =>{
-				document.getElementById('set').addEventListener('input', handleSelect);
-			})	;					
-			function handleSelect(ev){
-				let select = ev.target;
-				console.log(select.value);
-			}
 
-			function handleData(ev){
-				let theInput = ev.target;
-			}
-			
-			});
-		});
 		cards.forEach(card => {														
 			card.addEventListener('click', ()=> {
 				console.log();
@@ -266,7 +252,7 @@ function ready(){
 
 			});
 		});
-}
+});
 
 if(document.readyState === 'loading'){
 	document.addEventListener('DOMContentLoaded', ready());

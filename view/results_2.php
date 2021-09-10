@@ -14,6 +14,33 @@
   </div>
 </main>
 
+<?php  
+  $set = $_GET['set'];
+  echo $set.' Set chosen : ';
+  $path = "./data/";
+  $path.= $set;
+  $path.= ".json";
+ // echo $path;
+  $order = [];
+  $cards = json_decode(file_get_contents($path), true);
+  $lengthSet = count($cards);
+ // echo $lengthSet;
+ // var_dump($order);
+  $i = 0;
+
+  while($i < $lengthSet){
+    array_push($order, $i);
+    $i++;
+  }
+ // var_dump($order);
+ 
+  shuffle($order);
+ // var_dump($order);
+
+   
+?>
+
+
 <!--***********************find data set string ***************-->
 
 <!--************************* end data set selection ***********-->
@@ -31,11 +58,12 @@
     </div>
     
     <div class='card'>  
-        <div class='card-back card-face'>
+        <div class='card-back card-face' id="card-back">
             <img class='blue-logo'
             src='Assets/Images/The_Den_logo_circle.png'>            
         </div>
-        <div class='card-front card-face'>
+        <div class='card-back card-face' id="card-front">
+        <div class='card-front card-face' >
             <img class='card-value' alt='eight'
             src='Assets/Images/eight.jpg'>   
         </div>            
