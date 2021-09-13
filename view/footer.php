@@ -1,6 +1,6 @@
 <footer class="footer">
     <?php if($number){ ?>
-        <a href="index.php">Click here to pick another number</a>
+        <a href="index.php">Click here to play again</a>
 
 <?php }
     else{ ?>
