@@ -8,7 +8,7 @@
 }
 
 html {
-    font-size: 42px;
+    font-size: 24px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -31,11 +31,4 @@ body {
     margin: auto;
 }
 
-.main-entry__form{
-    @include flexCenter;
-    flex-direction: column;
-}
-.main-results__form{
-    @include flexCenter;
-    flex-direction: column;
-}
+

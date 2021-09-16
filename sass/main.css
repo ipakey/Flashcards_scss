@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 42px;
+  font-size: 24px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -50,38 +50,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
-}
-
-.main-entry__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.main-results__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .header {
@@ -228,6 +196,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: .25em;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-flex: 1;
@@ -245,10 +219,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main-results__form {
@@ -265,13 +239,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-flow: space-between;
-      flex-flow: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card {
-  width: 42%;
-  min-width: 150px;
+  width: 100%;
+  min-width: 450px;
   min-height: 100px;
   background: transparent;
   color: #fff;
@@ -323,8 +298,8 @@ body {
 .card-back {
   background: #fff;
   color: #08925d;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  width: 150px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,40 +321,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: inline-block;
   font-family: 'Abel', sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   padding: 0.25em;
-  border-radius: 15px;
-  width: 100%;
-  height: 73px;
+  border-radius: 15px ridge black;
+  width: 45%;
+  min-height: 120px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .main-results__incorrect {
-  font-family: 'Abel', sans-serif;
-  font-size: 0.5rem;
-  letter-spacing: 0.05em;
-  padding: 0.25em;
-  border-radius: 15px;
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  margin-top: 20px;
   background: darkgreen;
 }
 
 .main-results__correct {
-  font-family: 'Abel', sans-serif;
-  font-size: 0.5rem;
-  letter-spacing: 0.05em;
-  padding: 0.25em;
-  border-radius: 15px;
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  margin-top: 20px;
   background: #f0cd1f;
 }
 
@@ -390,16 +349,32 @@ body {
           box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
-.main-results__correct,
-.main-results__button-yes {
-  background: #f0cd1f;
-  color: #fff;
+.game-info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: inline-block;
 }
 
-.main-results__incorrect,
-.main-results__button-no {
-  background: darkgreen;
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: inline-block;
+}
+
+.navigation__text {
   color: #fff;
+  font-size: 24px;
 }
 
 @media only screen and (min-width: 768px) {

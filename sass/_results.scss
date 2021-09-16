@@ -2,30 +2,34 @@
 .main-results{
     width: 100%;
     @include flexCenter;
+    font-size: .25em;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
 }
 
 .main-results__container{
     @include flexCenter ;
-    flex-direction: row;
+    flex-direction: column;
+    
 
 }
 
 .main-results__form{
     @include flexCenter;
     flex-direction: column;
-    flex-flow: space-between;
+    justify-content: space-between;   
 }
 
 .card{
-    width: 42%;
-    min-width:  150px;
+    width:100%;
+    min-width:  450px;
     min-height: 100px;
     background: transparent;
     color: $header-color;
     font-size: .7em;
-    padding:1em;
+    padding: 1em;
     margin: 0.25em;
     outline:none;
     position: relative;
@@ -52,7 +56,6 @@
 
 .card-front{
     background: $card-bg;
-    
     @include flexCenter;
 }
 
@@ -60,50 +63,36 @@
     background: $header-color;
     color: $header-bg;
     transform: rotateY(180deg);
+    width: 150px;
+    height:150px;
     @include flexCenter;
 }
 
 .main-results__input
 {
     @include flexCenter;
+    display: inline-block;
     font-family: 'Abel', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 0.05em;
     padding: 0.25em;
-    border-radius: 15px;
-    width: 100%;
-    height: 73px;
+    border-radius: 15px ridge black;
+    width: 45%;
+    min-height: 120px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;   
+    text-align: center;
 }
 
 
 .main-results__incorrect{
-    font-family: 'Abel', sans-serif;
-    font-size: 0.5rem;
-    letter-spacing: 0.05em;
-    padding: 0.25em;
-    border-radius: 15px;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    margin-top: 20px;
-    background: $result-button-no;
+     background: $result-button-no;
 }
 
 
 
 .main-results__correct{
-    font-family: 'Abel', sans-serif;
-    font-size: 0.5rem;
-    letter-spacing: 0.05em;
-    padding: 0.25em;
-    border-radius: 15px;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    margin-top: 20px;
-    background: $result-button-yes;
+     background: $result-button-yes;
 }
 
 
@@ -115,18 +104,25 @@
     box-shadow: $shadow;
 }
 
-.main-results__correct,
-.main-results__button-yes{
-    background: $result-button-yes;
-    color: $header-color;
+
+
+
+
+.game-info{
+    justify-content: space-between;
+    display: inline-block;
 }
 
-.main-results__incorrect,
-.main-results__button-no{
-    background: $result-button-no;
-    color: $header-color;
+.navigation{
+    @include flexCenter;
+    justify-content: space-between;
+    display: inline-block;
 }
 
+.navigation__text{
+    color: $header-color;
+    font-size: 24px;
+}
 
 @include mq(768px){
     .card{
