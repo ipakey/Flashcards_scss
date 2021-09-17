@@ -16,7 +16,7 @@
 
 <?php  
   $set = $_GET['set'];
-  echo' Set chosen : '.$set;
+ // echo' Set chosen : '.$set;
   $path = "./data/";
   $path.= $set;
   $path.= ".json";
@@ -32,8 +32,8 @@
     $i++;
   }
   shuffle($order);
- var_dump($order);
- var_dump($cards);
+ //var_dump($order);
+ //var_dump($cards);
    
 
 
@@ -77,15 +77,16 @@
 <div class='card'>  
  <div class='card-back card-face' id="card-back">
     <img class='blue-logo'
-    src='Assets/Images/The_Den_logo_circle.png'>            
+    src='Assets/Images/theden_D.png'>            
   </div>
   <div class='card-back card-face' id="card-front">
     <div class='card-front card-face' >
           <img class='card-value' alt='eight'
-          src='Assets/Images/eight.jpg'>   
+          src='Assets/Images/pic1.png'>   
       </div>            
   </div>
 </div>
+
 </section>
 
 </main>
@@ -93,5 +94,5 @@
 <script type='text/javascript'>
   let obj = <?php echo json_encode($cards); ?>;
 	console.log(obj);
-	alert(obj[2][0]);
+//	alert(obj[2][0]);
 </script>

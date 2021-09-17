@@ -85,6 +85,7 @@ class Flashcards_Set {
 			card.classList.remove('matched');							
 		}); 
 	}
+
 	
 	flipCard(card, totalClicks){											
 		if(this.canFlipCard(card)){											
@@ -241,9 +242,13 @@ ready(){
 		});
 			
 	}
+}
 
-	if(document.readyState === 'loading'){
-		document.addEventListener('DOMContentLoaded', ready());
-	}	else{
-			ready();
-	}
+if(document.readyState === 'loading'){
+	document.addEventListener('DOMContentLoader',ready());
+}
+else{
+	this.ready();
+}
+
+
