@@ -1,4 +1,33 @@
+<<<<<<< HEAD
 <section class="main-overlay" aria-label="overlay container">
+=======
+<<<<<<< HEAD
+<main class="main-results" aria-label="flash card container">
+    <?php
+        $cards = array();
+
+
+        for ($i=1; $i <= 12; $i++){
+            $front = $cards[$i][0];
+            $back = $cards[$i][1];
+            $cards .="<div class='card' tabindex='0' aria-label='{$front} what is the right answer? '>
+                        <div class='card-front'> {$front} 
+                        </div>
+                        <div class='card-back'  
+                            aria-label='{$back} did you get it right? '>
+                            {$back}
+                        </div>
+                       </div>";
+            
+        };
+        
+        echo $cards;
+    ?>
+
+</main>
+=======
+<main class="main-overlay" aria-label="overlay container">
+>>>>>>> 335c1c8704fbe489a45145afeb7ad4a6b870bd44
   <div  class='overlay-text'> 
     Click to Start
   </div>
@@ -89,6 +118,7 @@
 
 </section>
 
+<<<<<<< HEAD
 </main>
 <script src="script.js"></script>
 <script type='text/javascript'>
@@ -96,3 +126,7 @@
 	console.log(obj);
 //	alert(obj[2][0]);
 </script>
+=======
+<script src="script.js"></script>
+>>>>>>> 075c0e56c518f02ef1434f85c0936212fb9a5738
+>>>>>>> 335c1c8704fbe489a45145afeb7ad4a6b870bd44
